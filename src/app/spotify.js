@@ -1,6 +1,6 @@
 export const authEndpoint = "https://accounts.spotify.com/authorize";
 const clientId = process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID;
-const redirectUri = "http://localhost:3000/dasboard";
+const redirectUri = process.env.NEXT_PUBLIC_REDIRECT_URL || "http://localhost:3000/dasboard";
 const scopes = [
   "user-read-currently-playing",
   "user-read-recently-played",
